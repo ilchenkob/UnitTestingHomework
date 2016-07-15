@@ -2,6 +2,8 @@ namespace Logic
 {
     public interface IMasterService
     {
-        int MakeMagic();
+        int GetDoubleSum();
+        double GetAverage();
+        double GetMaxSquare();
     }
 }

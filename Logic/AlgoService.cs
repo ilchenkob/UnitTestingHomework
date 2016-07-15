@@ -26,5 +26,17 @@ namespace Logic
             var result = Math.Pow(d, 3) + a * c - Math.PI * Math.Sqrt(b);
             return result;
         }
+
+        public double GetAverage(IEnumerable<int> data)
+        {
+            MethodsCalledCount++;
+            return data.Average();
+        }
+
+        public double Sqr(int data)
+        {
+            MethodsCalledCount++;
+            return Math.Pow(data, 2);
+        }
     }
 }

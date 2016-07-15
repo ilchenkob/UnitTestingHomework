@@ -5,9 +5,9 @@ namespace Logic
 {
     public class MasterService : IMasterService
     {
-        private IAlgoService _algoService;
+        private readonly IAlgoService _algoService;
 
-        private IDataService _dataService;
+        private readonly IDataService _dataService;
         
         public MasterService(IAlgoService algo, IDataService data)
         {
@@ -15,7 +15,7 @@ namespace Logic
             _dataService = data;
         }
 
-        public int MakeMagic()
+        public int GetDoubleSum()
         {
             var data = _dataService.GetAllData();
             if (data == null || !data.Any())
@@ -27,5 +27,17 @@ namespace Logic
         }
 
         //TODO: Make more methods
+
+        public double GetAverage()
+        {
+            var data = _dataService.GetAllData();
+            return _algoService.GetAverage(data);
+        }
+
+        public double GetMaxSquare()
+        {
+            var data = _dataService.GetMax();
+            return _algoService.Sqr(data);
+        }
     }
 }

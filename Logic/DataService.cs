@@ -12,13 +12,7 @@ namespace Logic
             _data = new List<int>(capacity);
         }
 
-        public int ItemsCount
-        {
-            get
-            {
-                return _data == null ? 0 : _data.Count;
-            }
-        }
+        public int ItemsCount => _data?.Count ?? 0;
 
         public void AddItem(int a)
         {
@@ -43,6 +37,11 @@ namespace Logic
         public void ClearAll()
         {
             _data.Clear();
+        }
+
+        public int GetMax()
+        {
+            return _data.Max();
         }
     }
 }

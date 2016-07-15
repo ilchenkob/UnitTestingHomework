@@ -15,5 +15,6 @@ namespace Logic
         void RemoveAt(int index);
 
         void ClearAll();
+        int GetMax();
     }
 }

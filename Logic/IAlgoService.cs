@@ -10,6 +10,8 @@ namespace Logic
 
         int MinValue(IEnumerable<int> arg);
 
-        double Function(int a, double b, int c, double d);
+
+        double GetAverage(IEnumerable<int> data);
+        double Sqr(int data);
     }
 }
