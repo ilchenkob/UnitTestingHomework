@@ -13,5 +13,6 @@ namespace Logic
 
         double GetAverage(IEnumerable<int> data);
         double Sqr(int data);
+        double Function(int a, double b, int c, double d);
     }
 }
